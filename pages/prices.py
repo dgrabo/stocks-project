@@ -6,6 +6,8 @@ from components.input import sidebar_controls
 
 st.title("Prices")
 
+st.caption("<- Use the sidebar to pick a time period (6mo, 1y, 5y, 10y) and choose whether to normalize stock prices to 100 for easier side-by-side comparison.  ")
+
 period, normalize = sidebar_controls()
 tickers = st.text_input("TIcker (comma):", placeholder="AAPL, MSFT, TSLA")
 tickers = [t.strip().upper() for t in tickers.split(",") if t.strip()]
